@@ -1,0 +1,239 @@
+﻿<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+        <meta name="description" content="Portfolio">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="icon" href="images/cv.webp">
+        <link href="https://fonts.googleapis.com/css?family=Kurale&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/bc7cd52748.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/translations.js"></script>
+
+    </head>
+<body>
+
+    <header>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+
+        <div id="lang">
+            <img src="./images/usFlag.webp" id="usFlag" onclick="changeLang(1)" alt="usa">
+            <img src="./images/israelFlag.webp" id="isFlag" onclick="changeLang(2)" alt="israel">
+        </div>
+    </header>
+
+    <main>
+
+        <div id="profileWraper">
+            <img src="./images/animated2.png" alt="profile" id="profileImg">
+        </div>
+
+        <div id="aboutMe">
+            <div class="aboutMeDesc">
+                <h2 id="aboutMeHead">About Me</h2>
+                <div class="line"></div>
+                <p id="aboutMeDesc">From a young age, I’ve always had an interest in technology.
+                    Whether it’s exploring new tech, learning additional skills in the computer, or solving technological problems.
+                    I bring these values to every experience throughout my life on a personal and professional level.
+                    To learn more about me, keep exploring my projects or reach out 
+                    <a href="javascript:void(0)" onclick="goToDiv('#footer')">directly.</a>
+                </p>
+            </div>
+        </div>
+                     
+        <div id="work">
+            <h2 id="workHead">Work Projects</h2>
+            <div class="line"></div>
+
+            <div id="011global" class="project">
+                <p>011Global©</p>
+                <div class="projectInfo">
+                    <div class="topBg"></div>
+                    <a href="https://www.011global.com/" rel="noopener" target="_blank">
+                        <img src="./images/011Global.jpg" alt="011global site">
+                    </a>
+                    <div class="projectUses">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Javascript</span>
+                        <span>jQuery</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="globusim" class="project">
+                <p>Globusim©</p>
+                <div class="projectInfo">
+                    <div class="topBg"></div>
+                    <a href="https://www.globusim.com/" rel="noopener" target="_blank">
+                        <img src="./images/globusim.jpg" alt="globusim site">
+                    </a>
+                    <div class="projectUses">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Javascript</span>
+                        <span>jQuery</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="wisesim" class="project">
+                <p>Wisesim©</p>
+                <div class="projectInfo">
+                    <div class="topBg"></div>
+                    <a href="https://www.wisesim.com/" rel="noopener" target="_blank">
+                        <img src="./images/wisesim.jpg" alt="wisesim site">
+                    </a>
+                    <div class="projectUses">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Javascript</span>
+                        <span>jQuery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="projectWrapper" class="lazy">
+            <h2 id="projectsHead">Personal Projects</h2>
+            <div class="line"></div>
+            <div id="theMoviesSite" class="project">
+                <p>MovieInfo</p>
+                <div class="projectInfo">
+                    <div class="topBg"></div>
+                    <a href="https://omriknight9.github.io/omris-movies/" rel="noopener" target="_blank">
+                        <img src="./images/projects/the_movies7.png" alt="movie site">
+                    </a>
+                    <p class="projectDesc">
+                        Find Info About Your Favorite Movies,TV Shows And Actors (Cast, Images, Videos etc..)
+                    </p>
+                    <div class="projectUses">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Javascript</span>
+                        <span>jQuery</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="superheroesSite" class="project">
+                <p>Superheroes</p>
+                <div class="projectInfo">
+                    <div class="topBg"></div>
+                    <a href="https://omriknight9.github.io/Superheroes/" rel="noopener" target="_blank">
+                        <img src="./images/projects/superheroes.jpg" alt="superhero site">
+                    </a>
+                    <p class="projectDesc">
+                        Search Info About Your Favorite Superheroes
+                    </p>
+                    <div class="projectUses">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Javascript</span>
+                        <span>jQuery</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="myMovies" class="project">
+                <p>My Movies</p>
+                <div class="projectInfo">
+                    <div class="topBg"></div>
+                    <a href="https://omriknight9.github.io/my-movie-list/" rel="noopener" target="_blank">
+                        <img src="./images/projects/my-movies.jpg" alt="my movies site">
+                    </a>
+                    <p class="projectDesc">
+                        List Of Movies That I Have In My External Drives
+                    </p>
+                    <div class="projectUses">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Javascript</span>
+                        <span>jQuery</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="angularShoppingList" class="project">
+                <p>Angular Shopping List</p>
+                <div class="projectInfo">
+                    <div class="topBg"></div>
+                    <a href="https://omriknight9.github.io/angular-shopping-list/" rel="noopener" target="_blank">
+                        <img src="./images/projects/angularShoppingList.jpg" alt="angular shopping list site">
+                    </a>
+                    <p class="projectDesc">
+                        Add Products To Your Shopping Cart
+                    </p>
+                    <div class="projectUses">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Angular</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="birthdays" class="project">
+                <p>Birthdays</p>
+                <div class="projectInfo">
+                    <div class="topBg"></div>
+                    <a href="https://omriknight9.github.io/birthdays/" rel="noopener" target="_blank">
+                        <img src="./images/projects/birthdays.jpg" alt="birthdays site">
+                    </a>
+                    <p class="projectDesc">
+                        Shows What Day Of The Week Is Your Birthday For Upcoming Years
+                    </p>
+                    <div class="projectUses">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Javascript</span>
+                        <span>jQuery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="skills" class="lazy">
+            <h2 id="skillsHead">Skills</h2>
+            <div class="line"></div>
+            <div class="skill">
+                <img src="./images/html.webp" alt="html">
+            </div>
+            <div class="skill">
+                <img src="./images/css.webp" alt="css">
+            </div>
+            <div class="skill">
+                <img src="./images/javascript.webp" alt="javascript">
+            </div>
+            <div class="skill">
+                <img src="./images/jquery.webp" alt="jquery">
+            </div>
+            <div class="skill">
+                <img src="./images/angular.webp" alt="angular">
+            </div>
+            <div class="skill">
+                <img src="./images/sql.png" alt="angusqllar">
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="line"></div>
+        <div id="social">
+            <a href="tel:+972508862867"><i class="fas fa-mobile-alt fa-3x" id="phone"></i></a>
+            <a href="https://www.facebook.com/omri.shalev.31" target="_blank" rel="noreferrer"><i class="fab fa-facebook fa-3x" id="facebook"></i></a>
+            <a href="https://github.com/omriknight9/" target="_blank" rel="noreferrer"><i class="fab fa-github fa-3x" id="github"></i></a>
+            <a href="https://www.linkedin.com/in/omri-shalev-8b3515119/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin fa-3x" id="linkedin"></i></a>
+        </div>
+    </footer>
+
+    <img src="images/upBtn.webp" alt="up arrow" id="goToTopBtn" onclick="goToTop()" />
+</body>
+</html>
