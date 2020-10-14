@@ -1,0 +1,13 @@
+
+@font-face {
+    font-family: 'font';
+    src: url('../fonts/VarelaRound-Regular.ttf');
+}
+
+body {
+    font-family: 'font', serif;
+}
+
+#aboutMeDesc {
+    direction: rtl;
+}

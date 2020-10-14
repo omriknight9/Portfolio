@@ -1,0 +1,477 @@
+
+:root {
+    --allColor: #4caf50;
+}
+
+html, body {
+    position: relative;
+    font-family: 'Kurale', sans-serif;
+    font-weight: 500;
+    min-height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+    background-color: white;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    background-image: linear-gradient(to left, rgba(241, 222, 187, 0.95), rgba(218, 218, 218, 0.95));
+}
+
+header {
+    position: relative;
+    padding-top: 2rem;
+}
+
+#lang {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+#usFlag {
+    width: 70px;
+    height: 50px;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.8));
+    opacity: .5;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+#isFlag {
+    width: 70px;
+    height: 50px;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.8));
+    cursor: pointer;
+}
+
+main {
+    margin-bottom: 12rem;
+    transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -webkit-transition: .3s;
+}
+
+.progress-container {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 8px;
+}
+
+.progress-bar {
+  height: 8px;
+  background: black;
+  width: 0;
+  opacity: .7;
+}
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+	-webkit-box-shadow: inset 0 0 1px rgba(0,0,0,.3);
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: unset;
+}
+
+hr {
+    color: lightgray;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 2rem;
+}
+
+h2 {
+    font-size: 3rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.line {
+    position: relative;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(to right,transparent,black,transparent);
+    margin: auto;
+}
+
+button {
+    border: none;
+    height: 3rem;
+    margin: 1rem;
+    background: white;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.8));
+    transition: .3s;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    -moz-transition: .3s;
+}
+
+button:active {
+    box-shadow: 0 5px 5px #666;
+    transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    -moz-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    -o-transform: translateY(4px);
+}
+
+#profileWraper {
+    width: 100%;
+    text-align: center;
+}
+
+#profileImg {
+    width: 150px;
+    border-radius: 100%;
+    filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.8));
+    transition: .3s;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    -moz-transition: .3s;
+}
+
+/*------------------------About Me-------------------------*/
+
+#aboutMe {
+    width: 90%;
+    margin: auto;
+}
+
+#aboutMeDesc {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+/*------------------------Projects-------------------------*/
+
+.topBg {
+    height: 5rem;
+}
+
+#work {
+    width: 100%;
+    display: flex;
+	flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+	justify-content: center;
+}
+
+#work .topBg {
+    height: 7rem;
+}
+
+#projectWrapper {
+    display: flex;
+	flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+	justify-content: center;
+    width: 100%;
+    transition: .8s;
+    -o-transition: .8s;
+    -webkit-transition: .8s;
+    -moz-transition: .8s;
+}
+
+.projectInfo {
+    margin-top: 6.5rem;
+    position: relative;
+    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.8));
+    background: white;
+    border-radius: 5px;
+    padding-bottom: .5rem;
+    background-image: linear-gradient(to bottom, rgba(0, 102, 161, 0.95), rgba(218, 218, 218, 0.95));
+}
+
+.project {
+    width: 25rem;
+    margin: 2rem;
+    text-align: center;
+    transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -webkit-transition: .3s;
+}
+
+.project p {
+    font-size: 1.5rem;
+}
+
+.project a {
+    width: 100%;
+    position: absolute;
+    top: -5rem;
+    left: 0;
+}
+
+.project img {
+    width: 22rem;
+    border-radius: 5px;
+    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.8));
+}
+
+.projectUses {
+    padding-bottom: 1rem;
+    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.8));
+}
+
+.projectUses span {
+    margin: 0 .2rem 0 .2rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: .2rem .3rem .2rem .3rem;
+    color: black;
+    font-weight: 700;
+}
+
+/*------------------------Skills-------------------------*/
+
+#skills {
+    display: flex;
+	flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+	justify-content: center;
+    width: 100%;
+    transition: .8s;
+    -o-transition: .8s;
+    -webkit-transition: .8s;
+    -moz-transition: .8s;
+}
+
+#skills .line {
+    margin-bottom: 1.5rem;
+}
+
+.skill {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.skill img {
+    width: 70px;
+}
+
+/*------------------------Footer-------------------------*/
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(214, 214, 214, 1);
+    width: 100%;
+    height: 5rem;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    -moz-transition: .3s;
+}
+
+#phoneImg {
+    width: 70px;
+}
+
+#social {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    justify-content: space-around;
+    padding: 1rem 0 0 0;
+}
+
+footer a {
+    text-decoration: none;
+    transition: .2s;
+    -o-transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+}
+
+#phone {
+    color: black;
+}
+
+#facebook {
+    color: #3b5998;
+}
+
+#github {
+    color: black;
+}
+
+#linkedin {
+    color: #0077b5;
+}
+
+/*------------------------Others-------------------------*/
+
+#openingArrow {
+    width: 70px;
+    cursor: pointer;
+}
+
+.lazy {
+    opacity: 0;
+}
+
+#goToTopBtn {
+    display: none;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 4rem;
+    right: 1.5rem;
+    z-index: 999;
+    border-radius: 100%;
+    filter: drop-shadow(0 1px 4px rgba(200, 200, 200, 0.8));
+}
+
+/*------------------------Mobile-------------------------*/
+
+@media screen and (min-width: 765px) {
+
+    .project:hover {
+        transform: scale(1.03);
+        -ms-transform: scale(1.03);
+        -o-transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        -moz-transform: scale(1.03);
+    }
+
+    footer a {
+        display: inline-block;
+    }
+
+    footer i:hover {
+        color: rgb(255, 145, 72) !important;
+    }
+
+    footer a:hover {
+        transform: rotate(-25deg) scale(1.1);
+        -ms-transform: rotate(-25deg) scale(1.1);
+        -o-transform: rotate(-25deg) scale(1.1);
+        -webkit-transform: rotate(-25deg) scale(1.1);
+        -moz-transform: rotate(-25deg) scale(1.1);
+    }
+}
+
+@media screen and (max-width: 765px) {
+
+    .popupCont {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    header {
+        padding-top: 1rem;
+    }
+
+    #lang {
+        position: unset;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    #work .topBg {
+        height: 5rem;
+    }
+
+    .project {
+        width: 20rem;
+        margin: 1rem 0 0 0;
+    }
+
+    .project img {
+        width: 18rem;
+    }
+
+    .topBg {
+        height: 3rem;
+    }
+
+    .skill img {
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+
+    footer a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 340px) {
+
+    #work .topBg {
+        height: 4rem;
+    }
+
+    .project {
+        width: 18rem;
+    }
+
+    .project img {
+        width: 16rem;
+    }
+
+    .topBg {
+        height: 2rem;
+    }
+
+    .project p {
+        font-size: 1.2rem;
+    }
+
+    footer a {
+        font-size: 1rem;
+    }
+}
