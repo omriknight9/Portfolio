@@ -1,4 +1,4 @@
-﻿
+
 function changeLang(lang) {
 
     if (lang == 1) {
@@ -52,6 +52,4 @@ function changeLang(lang) {
     
         lang = 1;
     }
-
-
 }
