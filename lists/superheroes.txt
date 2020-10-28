@@ -1,0 +1,9 @@
+
+
+{
+    "projectsImages" : [
+	{"id": 1, "image": "/projects/superheroes1.jpg", "next": "img-2", "prev": "img-3", "nextSlide": "img-dot-2", "prevSlide": "img-dot-3"},
+	{"id": 2, "image": "/projects/superheroes2.jpg", "next": "img-3", "prev": "img-1", "nextSlide": "img-dot-3", "prevSlide": "img-dot-1"},
+	{"id": 3, "image": "/projects/superheroes3.jpg", "next": "img-1", "prev": "img-2", "nextSlide": "img-dot-1", "prevSlide": "img-dot-2"}
+    ]
+}
