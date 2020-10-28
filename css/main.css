@@ -250,6 +250,11 @@ button:active {
     font-weight: 700;
 }
 
+.galleryImg {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
 /*------------------------Skills-------------------------*/
 
 #skills {
@@ -287,6 +292,113 @@ button:active {
 
 .skill img {
     width: 70px;
+}
+
+/*------------------------image Slider-------------------------*/
+
+#imgSliderWrapper {
+    position: fixed;
+    top: 0;
+    padding-top: 8%;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.slides {
+    padding: 0;
+    width: 750px;
+    height: 420px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 420px;
+    display: block;
+    position: absolute;
+    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.8));
+    transform: scale(0);
+    transition: all .4s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.nav label {
+    width: 100px;
+    height: 100%;
+    display: none;
+    position: absolute;
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+    transition: opacity .2s;
+    color: #FFF;
+    font-size: 10rem;
+    text-align: center;
+    line-height: 380px;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container .slide {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+	width: 100%;
+	bottom: 0;
+	height: 15px;
+	display: block;
+	position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .8);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.nav-dots .nav-dot {
+	top: -5px;
+	width: 11px;
+	height: 11px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+    background-color:white;
+    filter: drop-shadow(0 1px 4px rgba(255, 255, 255, 0.8));
+}
+
+.selectedSlide {
+    background-color:rgba(0, 102, 161, 0.95) !important;
 }
 
 /*------------------------Footer-------------------------*/
@@ -380,6 +492,31 @@ footer i {
 
 @media screen and (min-width: 765px) {
 
+    .galleryImg {
+        cursor: pointer;
+    }
+    
+    .galleryImg:hover {
+        color: rgb(255, 145, 72) !important;
+    }
+
+    /*------------------------image Slider-------------------------*/
+
+    .nav-dots .nav-dot:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .slide:hover + .nav label { 
+        opacity: 0.5; 
+    }
+
+    .nav label:hover { 
+        opacity: 1; 
+    }
+
+    /*------------------------Projects-------------------------*/
+
     .project:hover {
         transform: scale(1.03);
         -ms-transform: scale(1.03);
@@ -387,6 +524,8 @@ footer i {
         -webkit-transform: scale(1.03);
         -moz-transform: scale(1.03);
     }
+
+    /*------------------------Footer-------------------------*/
 
     footer a {
         display: inline-block;
@@ -407,8 +546,41 @@ footer i {
 
 @media screen and (max-width: 765px) {
 
-    .popupCont {
-        width: 65%;
+    /*------------------------image Slider-------------------------*/
+
+    .slides {
+        width: 500px;
+        height: 320px;
+    }
+
+    .slide {
+        width: 100%;
+        height: 100%;
+    }
+
+    .nav label { 
+        width: 50px;
+        font-size: 5rem;
+        opacity: 0.5;
+        line-height: 300px;
+    }
+
+    .nav label { 
+        opacity: 1; 
+    }
+}
+
+@media screen and (max-width: 530px) {
+    /*------------------------image Slider-------------------------*/
+
+    .slides {
+        width: 400px;
+        height: 250px;
+    }
+
+    .nav label { 
+        width: 50px;
+        line-height: 250px;
     }
 }
 
@@ -456,12 +628,38 @@ footer i {
 
 @media screen and (max-width: 430px) {
 
+    /*------------------------image Slider-------------------------*/
+
+    .slides {
+        width: 320px;
+        height: 200px;
+    }
+
+    .nav label { 
+        width: 30px;
+        font-size: 3rem;
+        line-height: 200px;
+    }
+
+    /*------------------------Footer-------------------------*/
+
     footer a {
         font-size: 1rem;
     }
 }
 
 @media screen and (max-width: 340px) {
+
+    /*------------------------image Slider-------------------------*/
+
+    .slides {
+        width: 300px;
+        height: 180px;
+    }
+
+    .nav label { 
+        line-height: 180px;
+    }
 
     #work .topBg {
         height: 4rem;
