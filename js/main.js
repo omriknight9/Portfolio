@@ -1,7 +1,7 @@
-﻿
-let lang = 1;
 
+let lang = 1;
 let valid;
+let projectsImages = [];
 
 $(document).ready(function (event) {
     
@@ -85,4 +85,90 @@ function goToDiv(element) {
         $(".headerContainer").css("opacity", 0);
         $(".headerContainer").css('pointer-events', 'none');
     }, 800)
+}
+
+function loadJson(textFile) {
+    $.get(textFile, function (data) {
+        projectsImages.push(JSON.parse(data));
+        buildGallery(projectsImages);
+    });
+}
+
+function buildGallery(array) {
+
+    let section = array[0].projectsImages;
+
+    for (var i = 0; i < section.length; i++) {
+
+        let input = $('<input>', {
+            type: 'radio',
+            name: 'radio-btn',
+            id: 'img-' + (i + 1),
+        }).insertBefore($('.nav-dots'));
+
+        let slide = $('<li>', {
+            class: 'slide-container',
+            'slideNum': (i + 1)
+        }).insertBefore($('.nav-dots'));
+
+        let slideImgWrapper = $('<div>', {
+            class: 'slide'
+        }).appendTo(slide);
+
+        let slideImg = $('<img>', {
+            id: 'slideImg1',
+            src: './images' + section[i].image, 
+        }).appendTo(slideImgWrapper);
+
+        let slideNav = $('<div>', {
+            class: 'nav'
+        }).appendTo(slide);
+
+        let leftLbl = $('<label>', {
+            class: 'prev',
+            for: section[i].prev,
+            text: '<',
+            nextSlide: section[i].prevSlide,
+            click: function() {
+                checkSelected($(this).attr('nextSlide'));
+            }
+        }).appendTo(slideNav);
+
+        let rightLbl = $('<label>', {
+            class: 'next',
+            for: section[i].next,
+            text: '>',
+            nextSlide: section[i].nextSlide,
+            click: function() {
+                checkSelected($(this).attr('nextSlide'));
+            }
+        }).appendTo(slideNav);
+
+        let dot = $('<label>', {
+            for: 'img-' + (i + 1),
+            class: 'nav-dot',
+            id: 'img-dot-' + (i + 1),
+            'slideNum': (i + 1)
+        }).appendTo($('.nav-dots'));
+    }
+
+    $('#img-1').attr('checked', 'checked');
+    $('#imgSliderWrapper').fadeIn('fast');
+    $('#img-dot-1').addClass('selectedSlide');
+
+    $(document).mouseup(function (e) {
+        if ($('#imgSliderWrapper').is(e.target) && $('#imgSliderWrapper').has(e.target).length === 0) {
+            $('#imgSliderWrapper').fadeOut('fast');
+            e.stopPropagation();
+            $(document).off('mouseup');
+            $('#imgSliderWrapper input').remove();
+            $('.slide-container, .nav-dot').remove();
+            projectsImages = [];
+        }
+    })   
+}
+
+function checkSelected(nextSlide) {
+    $('.nav-dot').removeClass('selectedSlide');
+    $('#' + nextSlide).addClass('selectedSlide');
 }
