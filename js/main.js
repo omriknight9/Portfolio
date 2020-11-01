@@ -4,6 +4,16 @@ let valid;
 let projectsImages = [];
 
 $(document).ready(function (event) {
+
+    $('#darkToggle').click(function() {
+        if (!$('#darkToggle').hasClass('dark')) {
+            $("head").append("<link rel='stylesheet' type='text/css' href='css/darkMode.css' id='darkCss'/>");
+        } else {
+            $('#darkCss').remove();
+        }
+        
+        $('#darkToggle').toggleClass('dark');
+    });
     
     if (window.location.href.indexOf("lang=he") > -1) {
         setTimeout(function(){
