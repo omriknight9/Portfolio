@@ -466,6 +466,55 @@ footer i {
 
 /*------------------------Others-------------------------*/
 
+#darkToggle {
+    position: fixed;
+    bottom: 4rem;
+    left: 2rem;
+    background: white;
+    border-radius: 100%;
+    z-index: 999;
+    filter: drop-shadow(0 1px 4px rgba(100, 100, 100, 0.8));
+}
+
+.modeSwitch {
+    z-index: 999;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+}
+
+.modeSwitch svg {
+    width: 0;
+    transition: all .3s ease-in;
+    transform-origin: center;
+}
+
+.modeSwitch .moon {
+    opacity: 0;
+}
+
+.modeSwitch .sun {
+    width: 30px;
+}
+
+.dark {
+    background: #323538 !important;
+    filter: drop-shadow(0 1px 4px rgba(255, 255, 255, 1)) !important;
+}
+
+.dark .moon {
+    opacity: 1;
+    width: 30px;
+}
+
+.dark .sun {
+    opacity: 0;
+    width: 0;
+}
+
 #openingArrow {
     width: 70px;
     cursor: pointer;
@@ -541,6 +590,12 @@ footer i {
         -o-transform: rotate(-15deg) scale(1.1);
         -webkit-transform: rotate(-15deg) scale(1.1);
         -moz-transform: rotate(-15deg) scale(1.1);
+    }
+
+    /*---------------Others---------------*/
+
+    #darkToggle {
+        cursor: pointer;
     }
 }
 
