@@ -1,5 +1,5 @@
 
-function changeLang(lang) {
+const changeLang = (lang) => {
 
     if (lang == 1) {
         $('#langBtnEn').css('pointer-events', 'none');
