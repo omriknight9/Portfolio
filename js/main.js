@@ -3,9 +3,9 @@ let lang = 1;
 let valid;
 let projectsImages = [];
 
-$(document).ready(function (event) {
+$(document).ready((event) => {
 
-    $('#darkToggle').click(function() {
+    $('#darkToggle').click(() => {
         if (!$('#darkToggle').hasClass('dark')) {
             $("head").append("<link rel='stylesheet' type='text/css' href='css/darkMode.css' id='darkCss'/>");
         } else {
@@ -16,7 +16,7 @@ $(document).ready(function (event) {
     });
     
     if (window.location.href.indexOf("lang=he") > -1) {
-        setTimeout(function(){
+        setTimeout(() => {
             changeToHeb();
             window.history.pushState('page2', 'Title', 'index.html');
         }, 600)
@@ -26,33 +26,33 @@ $(document).ready(function (event) {
         $(this).parent().parent().fadeOut(150);
     })
 
-    window.onbeforeunload = function () {
+    window.onbeforeunload = () => {
         window.scrollTo(0, 0);
     }
 
-    $('#langBtnHe').click(function () {
+    $('#langBtnHe').click( () => {
         changeToHeb();
     });
 
-    $('#langBtnEn').click(function () {
+    $('#langBtnEn').click(() => {
         changeToEng();
     });
 
-    window.onscroll = function () {
+    window.onscroll = () => {
         scrollIndicator()
         scrollBtn();
         lazyload();
     }
 });
 
-function scrollIndicator() {
+const scrollIndicator = () => {
     let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     let scrolled = (winScroll / height) * 100;
     document.getElementById("myBar").style.width = scrolled + "%";
 }
 
-function goToTop() {
+const goToTop = () => {
     $('html,body').animate({ scrollTop: 0 }, 'slow');
 }
 
@@ -65,20 +65,20 @@ function scrollBtn() {
     }
 }
 
-function lazyload() {
+const lazyload = () => {
 
     let lazyloadObject = document.querySelectorAll(".lazy");
 
     let scrollTop = window.pageYOffset;
 
-    lazyloadObject.forEach(function (object) {
+    lazyloadObject.forEach((object) => {
         if (object.getBoundingClientRect().top + 250 < (window.innerHeight)) {
             object.classList.remove('lazy');
         }
     });
 }
 
-function goToDiv(element) {
+const goToDiv = (element) => {
     if ($(window).width() > 900) {
         $('html, body').animate({ scrollTop: $(element).position().top }, 'slow');
     } else if ($(window).width() < 900 && $(window).width() > 600) {
@@ -87,28 +87,28 @@ function goToDiv(element) {
         $('html, body').animate({ scrollTop: $(element).position().top }, 'slow');
     }
     
-    setTimeout(function () {
+    setTimeout(() => {
         $('.closebtn').click();
     }, 300)
 
-    setTimeout(function () {
+    setTimeout(() => {
         $(".headerContainer").css("opacity", 0);
         $(".headerContainer").css('pointer-events', 'none');
     }, 800)
 }
 
-function loadJson(textFile) {
-    $.get(textFile, function (data) {
+const loadJson = (textFile) => {
+    $.get(textFile, (data) => {
         projectsImages.push(JSON.parse(data));
         buildGallery(projectsImages);
     });
 }
 
-function buildGallery(array) {
+const buildGallery = (array) => {
 
     let section = array[0].projectsImages;
 
-    for (var i = 0; i < section.length; i++) {
+    for (let i = 0; i < section.length; i++) {
 
         let input = $('<input>', {
             type: 'radio',
@@ -166,7 +166,7 @@ function buildGallery(array) {
     $('#imgSliderWrapper').fadeIn('fast');
     $('#img-dot-1').addClass('selectedSlide');
 
-    $(document).mouseup(function (e) {
+    $(document).mouseup((e) => {
         if ($('#imgSliderWrapper').is(e.target) && $('#imgSliderWrapper').has(e.target).length === 0) {
             $('#imgSliderWrapper').fadeOut('fast');
             e.stopPropagation();
@@ -178,7 +178,7 @@ function buildGallery(array) {
     })   
 }
 
-function checkSelected(nextSlide) {
+const checkSelected = (nextSlide) => {
     $('.nav-dot').removeClass('selectedSlide');
     $('#' + nextSlide).addClass('selectedSlide');
 }
