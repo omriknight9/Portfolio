@@ -69,8 +69,6 @@ const lazyload = () => {
 
     let lazyloadObject = document.querySelectorAll(".lazy");
 
-    let scrollTop = window.pageYOffset;
-
     lazyloadObject.forEach((object) => {
         if (object.getBoundingClientRect().top + 250 < (window.innerHeight)) {
             object.classList.remove('lazy');
@@ -110,7 +108,7 @@ const buildGallery = (array) => {
 
     for (let i = 0; i < section.length; i++) {
 
-        let input = $('<input>', {
+        $('<input>', {
             type: 'radio',
             name: 'radio-btn',
             id: 'img-' + (i + 1),
@@ -125,7 +123,7 @@ const buildGallery = (array) => {
             class: 'slide'
         }).appendTo(slide);
 
-        let slideImg = $('<img>', {
+        $('<img>', {
             id: 'slideImg1',
             src: './images' + section[i].image, 
         }).appendTo(slideImgWrapper);
@@ -134,7 +132,7 @@ const buildGallery = (array) => {
             class: 'nav'
         }).appendTo(slide);
 
-        let leftLbl = $('<label>', {
+        $('<label>', {
             class: 'prev',
             for: section[i].prev,
             text: '<',
@@ -144,7 +142,7 @@ const buildGallery = (array) => {
             }
         }).appendTo(slideNav);
 
-        let rightLbl = $('<label>', {
+        $('<label>', {
             class: 'next',
             for: section[i].next,
             text: '>',
@@ -154,7 +152,7 @@ const buildGallery = (array) => {
             }
         }).appendTo(slideNav);
 
-        let dot = $('<label>', {
+        $('<label>', {
             for: 'img-' + (i + 1),
             class: 'nav-dot',
             id: 'img-dot-' + (i + 1),
