@@ -349,7 +349,7 @@ button:active {
     position: absolute;
     filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.8));
     transform: scale(0);
-    transition: all .4s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .slide img {
@@ -380,7 +380,7 @@ button:active {
 input:checked + .slide-container .slide {
     opacity: 1;
     transform: scale(1);
-    transition: opacity 1s ease-in-out;
+    transition: opacity.2s ease-in-out;
 }
 
 input:checked + .slide-container .nav label { display: block; }
