@@ -18,6 +18,7 @@ const changeLang = (lang) => {
     
         $('#projectsHead').hide().html('Personal Projects').fadeIn('slow');
     
+        $('#omrisMovies .projectDesc').hide().html('Find Info About Your Favorite Movies,TV Shows And Actors (Cast, Images, Videos etc..) (Angular Project)').fadeIn('slow');
         $('#theMoviesSite .projectDesc').hide().html('Find Info About Your Favorite Movies,TV Shows And Actors (Cast, Images, Videos etc..)').fadeIn('slow');
         $('#superheroesSite .projectDesc').hide().html('Search Info About Your Favorite Superheroes').fadeIn('slow');
         $('#myMovies .projectDesc').hide().html('List Of Movies That I Have In My External Drives').fadeIn('slow');
@@ -42,6 +43,7 @@ const changeLang = (lang) => {
     
         $('#projectsHead').hide().html('פרוייקטים אישיים').fadeIn('slow');
     
+        $('#omrisMovies .projectDesc').hide().html('מצא מידע על הסרטים, תוכניות ושחקנים האהובים עליך (שחקנים, תמונות, סרטונים ועוד) (פרוייקט אנגולר)').fadeIn('slow');
         $('#theMoviesSite .projectDesc').hide().html('מצא מידע על הסרטים, תוכניות ושחקנים האהובים עליך (שחקנים, תמונות, סרטונים ועוד)').fadeIn('slow');
         $('#superheroesSite .projectDesc').hide().html('חפש מידע על גיבורי העל האהובים עליך').fadeIn('slow');
         $('#myMovies .projectDesc').hide().html('רשימה של סרטים שיש לי בכוננים חיצוניים').fadeIn('slow');
