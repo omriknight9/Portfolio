@@ -3,14 +3,20 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Omri Shalev - CV</title>
+        <title>Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-        <meta name="description" content="Omri Shalev - Curriculum-Vitae">
+        <meta name="description" content="Portfolio">
+        <meta property="og:site_name" content="Portfolio">
+        <meta property="og:title" content="Portfolio" />
+        <meta property="og:description" content="Omri Shalev - Portfolio" />
+        <meta property="og:image" itemprop="image" content="https://omriknight9.github.io/Portfolio//images/profile2.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://omriknight9.github.io/Portfolio/">
         <link rel="stylesheet" type="text/css" href="css/main.css">
-        <link rel="icon" href="images/cv.webp">
-        <link href="https://fonts.googleapis.com/css?family=David+Libre&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/cv.png">
+        <link href="https://fonts.googleapis.com/css?family=Kurale&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/bc7cd52748.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
         <script src="js/main.js"></script>
         <script src="js/translations.js"></script>
 
@@ -18,342 +24,230 @@
 <body>
 
     <header>
-        <div class="headerContainer">
-            <div class="header">
-                <div class="menuOpenWrapper" onclick="toggleClass($('#toggle')[0], 'on')">
-                    <div href="#menu" id="toggle">
-                        <span class="menuSpan"></span>
-                        <span class="menuSpan"></span>
-                        <span class="menuSpan"></span>
-                        <span class="menuSpan"></span>
-                        <span class="menuSpan"></span>
-                        <span class="menuSpan"></span>
-                    </div>
-                    <div id="menu">
-                        <ul>
-                            <li><a href="javascript:void(0)" onclick="goToDiv('#aboutMe')" id="aboutMeLinkMenu">About me</a></li>
-                            <li><a href="javascript:void(0)" onclick="goToDiv('#experience')" id="experienceLinkMenu">Experience</a></li>
-                            <li><a href="javascript:void(0)" onclick="goToDiv('#education')" id="educationLinkMenu">Education</a></li>
-                            <li><a href="javascript:void(0)" onclick="goToDiv('#projects')" id="projectsLinkMenu">Projects</a></li>
-                            <li><a href="javascript:void(0)" onclick="goToDiv('#skills')" id="skillsLinkMenu">Skills</a></li>
-                            <li><a href="javascript:void(0)" onclick="goToDiv('#contactForm')" id="contactLinkMenu">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="langContainer">
-                    <a href="javascript:void(0)"><img src="images/usFlag.webp" alt="us flag" id="langBtnEn" /></a>
-                    <a href="javascript:void(0)"><img src="images/israelFlag.webp" alt="israel flag" id="langBtnHe" /></a>
-                </div>
-
-                <h1 id="nameHead">Omri Shalev - CV</h1>
-            </div>
-
-            <div id="linksSocial">
-                <div class="links direcRtl">
-                    <a href="javascript:void(0)" onclick="goToDiv('#aboutMe')" id="aboutMeLink">About me</a>
-                    <a href="javascript:void(0)" onclick="goToDiv('#experience')" id="experienceLink">Experience</a>
-                    <a href="javascript:void(0)" onclick="goToDiv('#education')" id="educationLink">Education</a>
-                    <a href="javascript:void(0)" onclick="goToDiv('#projects')" id="projectsLink">Projects</a>
-                    <a href="javascript:void(0)" onclick="goToDiv('#skills')" id="skillsLink">Skills</a>
-                    <a href="javascript:void(0)" onclick="goToDiv('#contactForm')" id="contactLink">Contact</a>
-                </div>
-                <div class="social">
-                    <a href="https://www.facebook.com/omri.shalev.31" target="_blank" rel="noreferrer"><img src="images/facebook.webp" alt="facebook image"></a>
-                    <a href="https://github.com/omriknight9/" target="_blank" rel="noreferrer"><img src="images/github.webp" alt="github image"></a>
-                    <a href="https://www.linkedin.com/in/omri-shalev-8b3515119/" target="_blank" rel="noreferrer"><img src="images/linkedin.webp" alt="linkedin image"></a>
-                </div>
-            </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
         </div>
 
+        <div id="lang">
+            <img src="./images/usFlag.png" id="usFlag" onclick="changeLang(1)" alt="usa">
+            <img src="./images/israelFlag.png" id="isFlag" onclick="changeLang(2)" alt="israel">
+        </div>
     </header>
 
     <main>
-        <div id="bioContainer"></div>
+        <div id="profileWraper">
+            <img src="./images/profile.png" alt="profile" id="profileImg">
+        </div>
 
         <div id="aboutMe">
-            <div class="aboutMeDesc direcRtl">
-                <h3 id="aboutMeHead">About Me</h3>
-                <p id="aboutMeDesc">From a young age, I’ve always had an interest in technology. Whether it’s exploring new tech, learning additional skills in the computer, or solving technological problems. I bring these values to every experience throughout my life on a personal and professional level. To learn more about me, keep exploring my site or reach out <a href="javascript:void(0)" onclick="goToDiv('#footer')">directly.</a></p>
+            <div class="aboutMeDesc">
+                <h2 id="aboutMeHead">About Me</h2>
+                <div class="line"></div>
+                <p id="aboutMeDesc">From a young age, I’ve always had an interest in technology.
+                    Whether it’s exploring new tech, learning additional skills in the computer, or solving technological problems.
+                    I bring these values to every experience throughout my life on a personal and professional level.
+                    To learn more about me, keep exploring my projects or reach out 
+                    <a href="javascript:void(0)" onclick="goToDiv('#footer')">directly.</a>
+                </p>
             </div>
         </div>
+                     
+        <div id="work">
+            <h2 id="workHead">Work Projects</h2>
+            <div class="line"></div>
 
-        <div id="experience">
-            <div class="container">
-                <div class="experienceDesc">
-                    <h2 id="experienceHead">Experience</h2>
-                </div>
-                <h3 id="jobOneHeader" class="direcRtl">011Global© - Front-End Developer</h3>
-                <p id="jobOnePeriod" class="direcRtl">October 2018 - Today</p>
-                <ul>
-                    <li id="jobOneDesc1" class="direcRtl">Web Development by HTML 5, JavaScript, jQuery and SQL</li>
-                    <li id="jobOneDesc2" class="direcRtl">Web Design by CSS 3.0</li>
-                </ul>
-                <div class="websiteContainer">
-                    <h3 id="websiteOneHeader">011Global©</h3>
-
-                    <div class="imgContainer">
-                        <a href="https://www.011global.com/" target="_blank" class="websiteLink" rel="noreferrer"><img src="images/011Global.jpg" class="websiteImg" alt="011Global"></a>
-                    </div>
-                </div>
-                <div class="websiteContainer">
-                    <h3 id="websiteTwoHeader">Globusim©</h3>
-
-                    <div id="websitesContainer2" class="imgContainer">
-                        <a href="https://www.globusim.com" target="_blank" class="websiteLink" rel="noreferrer"><img src="images/globusim.jpg" class="websiteImg" alt="globusim"></a>
-                    </div>
-                </div>
-                <div class="websiteContainer">
-                    <h3 id="websiteThreeHeader">Wisesim©</h3>
-
-                    <div id="websitesContainer" class="imgContainer">
-                        <a href="https://www.wisesim.com" target="_blank" class="websiteLink" rel="noreferrer"><img src="images/wisesim.jpg" class="websiteImg" alt="wisesim"></a>
+            <div id="011global" class="project">
+                <p>011Global©</p>
+                <div class="projectInfo">
+                    <div class="topBg"></div>
+                    <a href="https://www.011global.com/" rel="noopener" target="_blank">
+                        <img src="./images/011Global.jpg" alt="011global site">
+                    </a>
+                    <div class="projectUses">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Javascript</span>
+                        <span>jQuery</span>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div id="education">
-            <div class="container">
-                <div class="educationDesc">
-                    <h2 id="educationHead">Education</h2>
-                </div>
-                <h3 id="schoolOneHeader" class="direcRtl">John Bryce© - Full Stack Web Developer</h3>
-                <p id="schoolOnePeriod">October 2017 - August 2018</p>
-                <ul>
-                    <li id="schoolOneDesc1" class="direcRtl">Web Development by HTML 5, JavaScript, jQuery, Angular 4, Node.js, PHP and SQL</li>
-                    <li id="schoolOneDesc2" class="direcRtl">Web Design by CSS 3.0</li>
-                </ul>
-                <h3 id="schoolTwoHeader">HackerU© - Application Development </h3>
-                <p id="schoolTwoPeriod">2015-2016</p>
-                <ul>
-                    <li id="schoolTwoDesc1" class="direcRtl">Web Development by HTML 5 and JavaScript</li>
-                    <li id="schoolTwoDesc2" class="direcRtl">Web Design by CSS 3.0</li>
-                    <li id="schoolTwoDesc3" class="direcRtl">Android & iOS Apps Development</li>
-                </ul>
-            </div>
-        </div>
-
-        <div id="projects">
-
-            <div class="container" id="omrisMoviesProject">
-                <div class="projectsDesc">
-                    <h2 id="projectsHead">Personal Projects</h2>
-                </div>
-
-                <h3 id="omrisMoviesProjectHeader">omris-movies</h3>
-                <p id="omrisMoviesProjectDesc" class="direcRtl">Find Info About Your Favorite Movies,TV Shows And Actors (Cast, Images, Videos etc..) (Angular Project)</p>
-
-                <div class="imgContainer">
-                    <a href="https://omriknight9.github.io/omris-movies/" target="_blank" rel="noreferrer"><img src="images/projects/omris-movies.jpg" class="omrisMoviesImg" alt="project img"></a>
-                    <a href="https://omriknight9.github.io/omris-movies/" target="_blank" rel="noreferrer"><img src="images/projects/omris-movies2.jpg" class="omrisMoviesImg" alt="project img"></a>
-                    <a href="https://omriknight9.github.io/omris-movies/" target="_blank" rel="noreferrer"><img src="images/projects/omris-movies3.jpg" class="omrisMoviesImg" alt="project img"></a>
-                    <a href="https://omriknight9.github.io/omris-movies/" target="_blank" rel="noreferrer"><img src="images/projects/omris-movies4.jpg" class="omrisMoviesImg" alt="project img"></a>
-                    <a href="https://omriknight9.github.io/omris-movies/" target="_blank" rel="noreferrer"><img src="images/projects/omris-movies5.jpg" class="omrisMoviesImg" alt=" project img"></a>
-                    <a href="https://omriknight9.github.io/omris-movies/" target="_blank" rel="noreferrer"><img src="images/projects/omris-movies6.jpg" class="omrisMoviesImg" alt=" project img"></a>
-                </div>
-            </div>
-
-            <div class="container" id="myMoviesProject">
-                <h3 id="myMoviesProjectHeader">My Movie List</h3>
-                <p id="myMoviesProjectDesc">List Of Movies That I Have In My External Drives </p>
-                <div class="imgContainer">
-                    <a href="https://omriknight9.github.io/my-movie-list/" target="_blank" rel="noreferrer">
-                        <img src="images/projects/my-movies.jpg" alt="project img">
+            <div id="globusim" class="project">
+                <p>Globusim©</p>
+                <div class="projectInfo">
+                    <div class="topBg"></div>
+                    <a href="https://www.globusim.com/" rel="noopener" target="_blank">
+                        <img src="./images/globusim.jpg" alt="globusim site">
                     </a>
-                    <a href="https://omriknight9.github.io/my-movie-list/" target="_blank" rel="noreferrer">
-                        <img src="images/projects/my-movies2.jpg" alt="project img">
-                    </a>
-                    <a href="https://omriknight9.github.io/my-movie-list/" target="_blank" rel="noreferrer">
-                        <img src="images/projects/my-movies3.jpg" alt="project img">
-                    </a>
-                    <a href="https://omriknight9.github.io/my-movie-list/" target="_blank" rel="noreferrer">
-                        <img src="images/projects/my-movies4.jpg" alt="project img">
-                    </a>
-                </div>
-            </div>
-
-            <div class="container" id="movieInfoProject">
-                <h3 id="movieInfoProjectHeader">MovieInfo</h3>
-                <p id="movieInfoProjectDesc" class="direcRtl">Find Info About Your Favorite Movies,TV Shows And Actors (Cast, Images, Videos etc..)</p>
-
-                <div class="imgContainer">
-                    <a href="https://omriknight9.github.io/movie-info/" target="_blank" rel="noreferrer"><img src="images/projects/the_movies.jpg" class="theMoviesImg" alt="project img"></a>
-                    <a href="https://omriknight9.github.io/movie-info/" target="_blank" rel="noreferrer"><img src="images/projects/the_movies2.jpg" class="theMoviesImg" alt="project img"></a>
-                    <a href="https://omriknight9.github.io/movie-info/" target="_blank" rel="noreferrer"><img src="images/projects/the_movies3.jpg" class="theMoviesImg" alt="project img"></a>
-                    <a href="https://omriknight9.github.io/movie-info/" target="_blank" rel="noreferrer"><img src="images/projects/the_movies4.jpg" class="theMoviesImg" alt="project img"></a>
-                    <a href="https://omriknight9.github.io/movie-info/" target="_blank" rel="noreferrer"><img src="images/projects/the_movies5.jpg" class="theMoviesImg" alt=" project img"></a>
-                    <a href="https://omriknight9.github.io/movie-info/" target="_blank" rel="noreferrer"><img src="images/projects/the_movies6.jpg" class="theMoviesImg" alt=" project img"></a>
-                </div>
-            </div>
-
-            <div class="container" id="superheroProject">
-                <h3 id="superheroProjectHeader">Superheroes</h3>
-                <p id="superheroProjectDesc">Search Info About Your Favorite Superheroes </p>
-                <div class="imgContainer">
-                    <a href="https://omriknight9.github.io/Superheroes/" target="_blank" rel="noreferrer">
-                        <img src="images/projects/superheroes.jpg" alt="project img">
-                    </a>
-                    <a href="https://omriknight9.github.io/Superheroes/" target="_blank"rel="noreferrer">
-                        <img src="images/projects/superheroes2.jpg" alt="project img">
-                    </a>
-                    <a href="https://omriknight9.github.io/Superheroes/" target="_blank" rel="noreferrer">
-                        <img src="images/projects/superheroes3.jpg" alt="project img">
-                    </a>
-                    <a href="https://omriknight9.github.io/Superheroes/" target="_blank" rel="noreferrer">
-                        <img src="images/projects/superheroes4.jpg" alt="project img">
-                    </a>
-                    <a href="https://omriknight9.github.io/Superheroes/" target="_blank" rel="noreferrer">
-                        <img src="images/projects/superheroes5.jpg" alt="project img">
-                    </a>
-                    <a href="https://omriknight9.github.io/Superheroes/" target="_blank" rel="noreferrer">
-                        <img src="images/projects/superheroes6.jpg" alt="project img">
-                    </a>
-                </div>
-            </div>
-
-            <div class="container" id="countriesProject">
-                <h3 id="countriesProjectHeader">Countries</h3>
-                <p id="countriesProjectDesc">Search Info About Countries (Captial, Currency, Dollar & Euro Rate etc..) </p>
-                <div class="imgContainer">
-                    <a href="https://omriknight9.github.io/countries-search/" target="_blank" rel="noreferrer">
-                        <img src="images/projects/countries.jpg" alt="project img">
-                    </a>
-                    <a href="https://omriknight9.github.io/countries-search/" target="_blank" rel="noreferrer">
-                        <img src="images/projects/countries2.jpg" alt="project img">
-                    </a>
-                </div>
-            </div>
-
-            <div class="container" id="birthdaysProject">
-                <h3 id="birthdaysProjectHeader">Birthdays</h3>
-                <p id="birthdaysProjectDesc">Shows What Day Of The Week Is Your Birthday For Upcoming Years </p>
-                <div class="imgContainer">
-                    <a href="https://omriknight9.github.io/birthdays/" target="_blank" rel="noreferrer">
-                        <img src="images/projects/birthdays.jpg" alt="project img">
-                    </a>
-                    <a href="https://omriknight9.github.io/birthdays/" target="_blank" rel="noreferrer">
-                        <img src="images/projects/birthdays2.jpg" alt="project img">
-                    </a>
-                    <a href="https://omriknight9.github.io/birthdays/" target="_blank" rel="noreferrer">
-                        <img src="images/projects/birthdays3.jpg" alt="project img">
-                    </a>
-                </div>
-            </div>
-
-            <div class="container" id="shoppingListProject">
-                <h3 id="shoppingListProjectHeader">Angular Shopping List</h3>
-                <p id="shoppingListProjectDesc">Add Products To Your Shopping Cart</p>
-                <div class="imgContainer">
-                    <a href="https://omriknight9.github.io/angular-shopping-list/" target="_blank" rel="noreferrer">
-                        <img src="images/projects/angularShoppingList.jpg" alt="project img">
-                    </a>
-                    <a href="https://omriknight9.github.io/angular-shopping-list/" target="_blank" rel="noreferrer">
-                        <img src="images/projects/angularShoppingList2.jpg" alt="project img">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div id="skills">
-            <h2 id="skillsHead">My Skills</h2>
-        </div>
-
-        <div class="skillsContainer">
-            <div id="skillsDesc">
-                <div>
-                    <img src="images/html.webp" alt="">
-                    <p>HTML</p>
-                </div>
-                <div>
-                    <img src="images/css.webp" alt="">
-                    <p>CSS</p>
-                </div>
-                <div>
-                    <img src="images/javascript.webp" alt="">
-                    <p>JavaScript</p>
-                </div>
-                <div>
-                    <img src="images/jquery.webp" alt="">
-                    <p>jQuery</p>
-                </div>
-                <div>
-                    <img src="images/angular.webp" alt="">
-                    <p>Angular</p>
-                </div>
-                <div>
-                    <img src="images/mysql2.webp" id="mysql" alt="">
-                    <p>MySQL</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="sentenceContainer">
-            <div id="sentence">
-                <img class="sentenceImg" src="images/backgrounds/sentenceImg.jpg" alt="sentenceImg">
-                <div class="sentenceImgOverlay">
-                    <h5 class="sentenceTitle direcRtl">"The best way to predict the future is to create it"</h5>
-                    <p class="sentenceDesc">Abraham Lincoln</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="contactContainer">
-            <div id="contactForm">
-                <h2>Contact</h2>
-                <div class="inputsContainer">
-                    <div class="nameWrapper">
-                        <label for="nameInput" id="nameLbl" class="floatLbl">
-                            Name
-                        </label>
-                        <input name="nameInput" id="nameInput" class="floatInput focusBorder" type="text" value="" onclick="BackColor($(this))" autocomplete="off" />
-                        <span class="focus-border"></span>
+                    <div class="projectUses">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Javascript</span>
+                        <span>jQuery</span>
                     </div>
+                </div>
+            </div>
 
-                    <div class="emailWrapper">
-                        <label for="emailInput" id="emailLbl" class="floatLbl">
-                            Email
-                        </label>
-                        <input name="emailInput" id="emailInput" class="floatInput focusBorder" type="text" value="" onclick="BackColor($(this))" autocomplete="off" />
-                        <span class="focus-border"></span>
+            <div id="wisesim" class="project">
+                <p>Wisesim©</p>
+                <div class="projectInfo">
+                    <div class="topBg"></div>
+                    <a href="https://www.wisesim.com/" rel="noopener" target="_blank">
+                        <img src="./images/wisesim.jpg" alt="wisesim site">
+                    </a>
+                    <div class="projectUses">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Javascript</span>
+                        <span>jQuery</span>
                     </div>
-                    <div class="contentFormWrapper">
-                        <label for="contentForm" id="contentFormLbl" class="floatLbl">
-                            Your Messege
-                        </label>
-                        <textarea name="contentForm" id="contentForm" class="floatInput focusBorder" type="text" value="" onclick="BackColor($(this))" autocomplete="off" ></textarea>
-                        <span class="focus-border"></span>
-                    </div>
-                    <button onclick="sendEmail()" id="submitBtn">Submit</button>
                 </div>
             </div>
         </div>
-        
+
+        <div id="projectWrapper" class="lazy">
+            <h2 id="projectsHead">Personal Projects</h2>
+            <div class="line"></div>
+
+            <div id="myMovies" class="project">
+                <p>My Movies</p>
+                <div class="projectInfo">
+                    <div class="topBg"></div>
+                    <a href="https://omriknight9.github.io/my-movie-list/" rel="noopener" target="_blank">
+                        <img src="./images/projects/my-movies1.jpg" alt="my movies site">
+                    </a>
+                    <p class="projectDesc">
+                        Find Info About Your Favorite Movies,TV Shows And Actors (Cast, Images, Videos etc..)
+                    </p>
+
+                    <i class="far fa-images galleryImg" onclick="loadJson('./lists/myMovies.txt')"></i>
+
+                    <div class="projectUses">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Javascript</span>
+                        <span>jQuery</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="superheroesSite" class="project">
+                <p>Superheroes</p>
+                <div class="projectInfo">
+                    <div class="topBg"></div>
+                    <a href="https://omriknight9.github.io/Superheroes/" rel="noopener" target="_blank">
+                        <img src="./images/projects/superheroes1.jpg" alt="superhero site">
+                    </a>
+                    <p class="projectDesc">
+                        Search Info About Your Favorite Superheroes
+                    </p>
+
+                    <i class="far fa-images galleryImg" onclick="loadJson('./lists/superheroes.txt')"></i>
+
+                    <div class="projectUses">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Javascript</span>
+                        <span>jQuery</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="angularShoppingList" class="project">
+                <p>Angular Shopping List</p>
+                <div class="projectInfo">
+                    <div class="topBg"></div>
+                    <a href="https://omriknight9.github.io/angular-shopping-list/" rel="noopener" target="_blank">
+                        <img src="./images/projects/angularShoppingList.jpg" alt="angular shopping list site">
+                    </a>
+                    <p class="projectDesc">
+                        Add Products To Your Shopping Cart
+                    </p>
+                    <div class="projectUses">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Angular</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="birthdays" class="project">
+                <p>Birthdays</p>
+                <div class="projectInfo">
+                    <div class="topBg"></div>
+                    <a href="https://omriknight9.github.io/birthdays/" rel="noopener" target="_blank">
+                        <img src="./images/projects/birthdays.jpg" alt="birthdays site">
+                    </a>
+                    <p class="projectDesc">
+                        Shows What Day Of The Week Is Your Birthday For Upcoming Years
+                    </p>
+                    <div class="projectUses">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Javascript</span>
+                        <span>jQuery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="imgSliderWrapper">
+            <ul class="slides">    
+                <li class="nav-dots"></li>
+            </ul>
+        </div>
+
+        <div id="skills" class="lazy">
+            <h2 id="skillsHead">Skills</h2>
+            <div class="line"></div>
+            <div class="skill">
+                <img src="./images/html.png" alt="html">
+            </div>
+            <div class="skill">
+                <img src="./images/css.png" alt="css">
+            </div>
+            <div class="skill">
+                <img src="./images/javascript.png" alt="javascript">
+            </div>
+            <div class="skill">
+                <img src="./images/jquery.png" alt="jquery">
+            </div>
+            <div class="skill">
+                <img src="./images/angular.png" alt="angular">
+            </div>
+            <div class="skill">
+                <img src="./images/sql.png" alt="angusqllar">
+            </div>
+        </div>
+
     </main>
 
     <footer id="footer">
-        <div class="container">
-            <div id="contact">
-                <ul>
-                    <li><a href="tel:+972508862867" id="phone" class="direcRtl">Phone: +972508862867</a></li>
-                    <li><a href="mailto:omriknight9@gmail.com" id="email">Email: omriknight9@gmail.com</a></li>
-                    <li><a href="images/Omri Shalev - CV.docx" id="cvFile" download>Curriculum Vitae</a></li>
-                </ul>
-            </div>
+        <div class="line"></div>
+        <div id="social">
+            <a href="tel:+972508862867"><i class="fas fa-mobile-alt" id="phone"></i></a>
+            <a href="https://www.facebook.com/omri.shalev.31" target="_blank" rel="noreferrer"><i class="fab fa-facebook" id="facebook"></i></a>
+            <a href="https://github.com/omriknight9/" target="_blank" rel="noreferrer"><i class="fab fa-github" id="github"></i></a>
+            <a href="https://www.linkedin.com/in/omri-shalev-8b3515119/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin" id="linkedin"></i></a>
+            <a href="images/Omri Shalev - CV.docx" id="cvFile" download><i class="far fa-address-card" id="cv"></i></a>
         </div>
     </footer>
 
-    <img src="images/upBtn.webp" alt="up arrow" class="goToTopBtn" onclick="goToTop()" />
+    <img src="images/upBtn.png" alt="up arrow" id="goToTopBtn" onclick="goToTop()" />
 
-    <div id="emailSentPop" class="popUpInfo">
-        <div class="popupCont">
-            <div class="Xbtn"></div>
-            <h2 class="">Email Sent</h2>
-            
-            <div class="popupBtnsWrapper">
-                <button class="popupBtn" id="" onclick="closeCurrentPopup($(this))">Close</button>
-            </div>
+    <div id="darkToggle">
+        <div class="modeSwitch">
+            <svg class="sun" fill="none" stroke="#fbb046" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-sun" viewBox="0 0 24 24">
+                <defs/>
+                    <circle cx="12" cy="12" r="5"/>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+            </svg>
+            <svg class="moon" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-moon" viewBox="0 0 24 24">
+                <defs/>
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+            </svg>
         </div>
     </div>
+
 </body>
 </html>
