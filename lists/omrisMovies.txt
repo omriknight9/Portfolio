@@ -1,0 +1,12 @@
+
+
+{
+    "projectsImages" : [
+	{"id": 1, "image": "/projects/omris-movies1.jpg", "next": "img-2", "prev": "img-6", "nextSlide": "img-dot-2", "prevSlide": "img-dot-6"},
+	{"id": 2, "image": "/projects/omris-movies2.jpg", "next": "img-3", "prev": "img-1", "nextSlide": "img-dot-3", "prevSlide": "img-dot-1"},
+	{"id": 3, "image": "/projects/omris-movies3.jpg", "next": "img-4", "prev": "img-2", "nextSlide": "img-dot-4", "prevSlide": "img-dot-2"},
+	{"id": 4, "image": "/projects/omris-movies4.jpg", "next": "img-5", "prev": "img-3", "nextSlide": "img-dot-5", "prevSlide": "img-dot-3"},
+	{"id": 5, "image": "/projects/omris-movies5.jpg", "next": "img-6", "prev": "img-4", "nextSlide": "img-dot-6", "prevSlide": "img-dot-4"},
+	{"id": 6, "image": "/projects/omris-movies6.jpg", "next": "img-1", "prev": "img-5", "nextSlide": "img-dot-1", "prevSlide": "img-dot-5"}
+    ]
+}
